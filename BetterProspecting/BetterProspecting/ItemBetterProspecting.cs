@@ -81,13 +81,12 @@ namespace BetterProspecting
         public override bool OnBlockBrokenWith(IWorldAccessor world, Entity byEntity, ItemSlot itemslot, BlockSelection blockSel, float dropQuantityMultiplier = 1)
         {
             int toolMode = GetToolMode(itemslot, (byEntity as EntityPlayer).Player, blockSel);
-            var damage = 4;
+            var damage = 1;
             var intialToolsPresent = 1;
 
             if (toolMode == intialToolsPresent + 0)
             {
                 ProbeDistanceSampleMode(world, byEntity, itemslot, blockSel, ThisMod.Config.DistanceModeSmallRadius, ProspectingTargetType.Ore);
-                damage = 3;
             }
             else if (toolMode == intialToolsPresent + 1)
             {
