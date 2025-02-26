@@ -31,6 +31,8 @@
 
           buildPhase = ''
             export VINTAGE_STORY="${pkgs.vintagestory}/share"
+            dotnet restore BetterProspecting/CakeBuild
+            dotnet restore BetterProspecting/BetterProspecting
             dotnet run --project BetterProspecting/CakeBuild/CakeBuild.csproj
           '';
 
