@@ -20,7 +20,7 @@
       perSystem = {pkgs, ...}: {
         packages.default = pkgs.stdenv.mkDerivation {
           pname = "BetterProspecting";
-          version = builtins.substring 0 8 self.rev or "dirty";
+          version = "1.5.0";
 
           src = pkgs.lib.cleanSource ./.;
 
